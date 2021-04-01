@@ -43,7 +43,10 @@
       "last 1 safari version"
     ]
   },
-  "gitHooks": {
-		"pre-commit": "npm run build"
-	}
+  "devDependencies": {
+    "simple-git-hooks": "^2.2.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npm run build"
+  }
 }
