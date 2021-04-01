@@ -1,6 +1,6 @@
 const path = require("path");
 const express = require("express");
-const app = express(); // create express app
+const app = express();
 
 // port
 const port = process.env.PORT || 5000;
