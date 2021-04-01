@@ -2,6 +2,8 @@
 
 This project dev with react as a client, and nodejs as server.
 
+You can see the Demo [here](https://aviad-something-good.herokuapp.com/)
+
 ## Available Scripts
 
 In the project directory, you can run:
