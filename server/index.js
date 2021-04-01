@@ -2,7 +2,7 @@ const path = require("path");
 const express = require("express");
 const app = express(); // create express app
 
-// port
+// port a
 const port = process.env.PORT || 5000;
 
 // add middleware
