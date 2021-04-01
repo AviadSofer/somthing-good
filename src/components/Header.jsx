@@ -5,12 +5,12 @@ import HeaderText from './HeaderText';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        position: 'sticky',
-        top: 0,
         minHeight: '100vh',
         display: 'flex',
         justifyContent: 'center', // ציר X
         alignItems: 'center', // ציר Y
+        position: 'sticky',
+        top: 0,
         color: '#fff',
         fontFamily: 'Secular One, sans-serif',
         [theme.breakpoints.down('sm')]: {
@@ -29,7 +29,4 @@ function Header() {
     )
 }
 
-export default Header
-
-// <img src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt={'logo'} className={classes.appbarTitle}></img>
-// <h1 className={classes.appbarTitle}>האי <span className={classes.colorText}>שלי</span></h1>
+export default Header;

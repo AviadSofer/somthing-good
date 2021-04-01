@@ -19,7 +19,7 @@ function App() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <CssBaseline /> {/*מאפס את הסיסס כך שיהיה שווה בכל הדפדפנים*/}
+      <CssBaseline />
       <Header />
       <Explain />
       <InputAndOutput />

@@ -3,11 +3,11 @@ import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        minHeight: '100vh',
         display: 'flex',
         justifyContent: 'center', // ציר X
         alignItems: 'center', // ציר Y
         flexWrap: 'wrap',
-        minHeight: '100vh',
         margin: '0 auto', // תחתונים ועליונים אפס, ממרכז אופקית
         width: '82%',
         backgroundColor: '#fff',
@@ -17,9 +17,9 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     paragraph: {
-        textAlign: 'center',
         fontFamily: 'Secular One, sans-serif',
         fontSize: '1.5rem',
+        textAlign: 'center',
         [theme.breakpoints.down('sm')]: {
             fontSize: '1.3rem',
         },

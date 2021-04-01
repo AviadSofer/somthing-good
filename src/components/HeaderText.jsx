@@ -5,8 +5,8 @@ import { Link as Scroll } from 'react-scroll'
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        margin: '0 auto', // תחתונים ועליונים אפס, ממרכז אופקית
         width: "50%",
+        margin: '0 auto', // תחתונים ועליונים אפס, ממרכז אופקית
         textAlign: 'center', // יישור טקסט
         [theme.breakpoints.down('sm')]: {
             width: '85%',
@@ -19,14 +19,14 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '3rem',
         },
     },
-    colorText: {
-        color: '#5AFF3D'
-    },
     paragraph: {
         fontSize: '2rem',
         [theme.breakpoints.down('sm')]: {
             fontSize: '1.6rem',
         },
+    },
+        colorText: {
+        color: '#5AFF3D'
     },
     goDown: {
         color: '#5AFF3D',

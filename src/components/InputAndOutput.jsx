@@ -25,12 +25,9 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     textarea: {
-        width: 500,
+        width: '100%',
         fontSize: '1rem',
         fontFamily: 'Secular One, sans-serif',
-        [theme.breakpoints.down('sm')]: {
-            width: '100%',
-        },
     },
     output: {
         width: 500,
@@ -43,22 +40,23 @@ const useStyles = makeStyles((theme) => ({
     },
     outputText: {
         minHeight: '20vh',
-        whiteSpace: 'pre-wrap',
         wordWrap: 'break-word',
+        whiteSpace: 'pre-wrap',
         fontSize: '1.1rem',
         [theme.breakpoints.down('sm')]: {
             fontSize: '1rem',
         },
     },
     buttons: {
-        display: 'flex',
-        justifyContent: 'space-between',
         width: '43%',
+        display: 'flex',
         [theme.breakpoints.down('sm')]: {
             width: '100%',
+            justifyContent: 'center',
         },
     },
     facebook: {
+        margin: 'auto 5px',
         backgroundColor: '#4267B2'
     },
     whatasapp: {
@@ -82,13 +80,13 @@ function InputAndOutput() {
                 <TextareaAutosize
                     rowsMin={8}
                     maxLength={250}
-                    placeholder="לכאורה"
+                    placeholder="כאן כותבים"
                     onChange={changeHandler}
                     className={classes.textarea}
                 />
             </div>
             <div id={'input-and-output'} className={classes.output}>
-                <h2>וזו התוצאה, למטה אפשר להוריד, לשתף, אפילו כדאי:</h2>
+                <h2>וזו התוצאה, למטה אפשר להוריד, לשתף:</h2>
                 <p id={'text'} className={classes.outputText}>{text}</p>
                 <div className={classes.buttons}>
                 <Button variant="contained" color="secondary" onClick={clickHandler}>
