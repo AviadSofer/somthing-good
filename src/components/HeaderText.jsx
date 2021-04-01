@@ -51,7 +51,7 @@ function HeaderText() {
             <br/>
             #משהוקטןוטוב
             </h2>
-            <Scroll to={'place-to-visit'} smooth={true}> {/*גלילה כשהחץ נלחץ*/}
+            <Scroll to={'input-and-output'} smooth={true}> {/*גלילה כשהחץ נלחץ*/}
             <IconButton>
                 <ExpandMoreIcon className={classes.goDown}/>
             </IconButton>

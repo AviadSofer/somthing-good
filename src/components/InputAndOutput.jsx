@@ -87,7 +87,7 @@ function InputAndOutput() {
                     className={classes.textarea}
                 />
             </div>
-            <div className={classes.output}>
+            <div id={'input-and-output'} className={classes.output}>
                 <h2>וזו התוצאה, למטה אפשר להוריד, לשתף, אפילו כדאי:</h2>
                 <p id={'text'} className={classes.outputText}>{text}</p>
                 <div className={classes.buttons}>
