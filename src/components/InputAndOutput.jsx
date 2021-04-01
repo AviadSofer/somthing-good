@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Button, makeStyles, TextareaAutosize } from '@material-ui/core'
-import textToImage from '../hook/textToImage'
+import { downloadImage } from '../hook/textToImage'
 import { FacebookIcon, FacebookShareButton, WhatsappIcon, WhatsappShareButton } from 'react-share';
 
 const useStyles = makeStyles((theme) => ({
@@ -71,7 +71,7 @@ function InputAndOutput() {
         setText(e.target.value) 
     }
     function clickHandler() { 
-        textToImage(text)
+        downloadImage(text)
     }
     return (
         <div className={classes.root} id={'input-and-output'}>
@@ -92,12 +92,12 @@ function InputAndOutput() {
                 <Button variant="contained" color="secondary" onClick={clickHandler}>
                     להורדה
                 </Button>
-                <FacebookShareButton url={`https://www.gstatic.com/webp/gallery3/1.sm.png`} openShareDialogOnClick={true}>
+                <FacebookShareButton url={process.env.PUBLIC_URL} openShareDialogOnClick={true}>
                     <Button className={classes.facebook} variant="contained">
                         <FacebookIcon size={"2rem"} round/>
                     </Button>
                 </FacebookShareButton>
-                <WhatsappShareButton>
+                <WhatsappShareButton url={process.env.PUBLIC_URL}>
                     <Button className={classes.whatasapp} variant="contained">
                         <WhatsappIcon size={"2rem"} round/>
                     </Button>

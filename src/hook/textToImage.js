@@ -1,6 +1,6 @@
 import { generate } from 'text-to-image';
 
-function textToImage(text) {
+function downloadImage(text) {
     generate(text, {
         direction: 'rtl',
         textAlign: 'center',
@@ -15,4 +15,18 @@ function textToImage(text) {
       });
 }
 
-export default textToImage
+function getImageUrl(text) {
+    generate(text, {
+        direction: 'rtl',
+        textAlign: 'center',
+        margin: 15,
+        fontSize: 24,
+        fontFamily: 'Secular One, sans-serif',
+    }).then((dataUri) => {
+        const link = document.createElement('a');
+        link.href = dataUri;
+        return link;
+      });
+}
+
+export { downloadImage, getImageUrl };

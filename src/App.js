@@ -6,12 +6,12 @@ import InputAndOutput from "./components/InputAndOutput";
 
 const useStyles = makeStyles({
   root: {
-    backgroundAttachment: 'fixed', // parallax scrolling effect
+    direction: 'rtl',
     height: '115vh',
+    backgroundAttachment: 'fixed', // parallax scrolling effect
     backgroundImage: `url(${process.env.PUBLIC_URL}/assets/background.jpg)`,
     backgroundRepeat: "no-repeat", // התמונה לא תחזור על עצמה
     backgroundSize: "cover", // מכסה את כל הדף, גם אם יצטרך למתוח את השוליים או לקצץ
-    direction: 'rtl',
   },
 });
 
