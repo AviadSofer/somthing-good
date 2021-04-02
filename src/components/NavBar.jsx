@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { AppBar, Button, makeStyles, Toolbar } from '@material-ui/core'
 import { Link as Scroll } from 'react-scroll'
 import navButtons from '../static/navButtons'
@@ -31,8 +31,8 @@ const useStyles = makeStyles((theme) => ({
          color: '#5AFF3D'
      },
      navButtonWhite: {
-        background: 'none',
         color: '#fff',
+        background: 'none',
         fontFamily: 'Secular One, sans-serif',
         fontSize: '1.2rem',
         margin: '7px',
@@ -58,8 +58,7 @@ function NavBar() {
     const classes = useStyles();
     const [navBackground, setNavBackground] = useState('appBarTransparent');
     const [navButton, setNavButton] = useState('navButtonWhite');
-    useEffect(() => {
-        const handlerScroll = () => {
+    function changeBackground() {
             const offetSetHeight = window.document.getElementById('explain').offsetHeight;
             if (window.pageYOffset > offetSetHeight) {
                 setNavBackground('appBarSolid')
@@ -69,11 +68,7 @@ function NavBar() {
                 setNavButton('navButtonWhite')
             }
         }
-        document.addEventListener('scroll', handlerScroll)
-        return () => {
-            document.removeEventListener('scroll', handlerScroll)
-        }
-    }, [])
+    window.addEventListener('scroll', changeBackground)
     return (
         <div>
             <AppBar className={classes[navBackground]} elevation={0}> {/*אלווישן=גובה*/}

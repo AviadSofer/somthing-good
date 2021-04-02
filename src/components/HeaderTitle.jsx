@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     title: {
         fontSize: '4rem',
         [theme.breakpoints.down('sm')]: {
-            marginTop: '25vh',
+            marginTop: '20vh',
             fontSize: '3rem',
         },
     },
@@ -34,14 +34,14 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-function HeaderText() {
+function HeaderTitle() {
     const classes = useStyles();
     const [checked, setChecked] = useState(false);
     useEffect(() => {
         setChecked(true) // ציקד הופך לטרו ברינדור הראשון של הדף
     }, [])
     return (
-        <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapsedHeight={50}> {/*אנימציה*/}
+        <Collapse in={checked} {...(checked ? { timeout: 2000 } : {})} collapsedHeight={50}> {/*אנימציה*/}
         <div className={classes.root}>
             <h1 className={classes.title}>
                 משהו <span className={classes.colorText}>טוב</span>
@@ -61,4 +61,4 @@ function HeaderText() {
     )
 }
 
-export default HeaderText; 
+export default HeaderTitle; 

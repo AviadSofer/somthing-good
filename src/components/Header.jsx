@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core'
 import NavBar from './NavBar';
-import HeaderText from './HeaderText';
+import HeaderTitle from './HeaderTitle';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -24,7 +24,7 @@ function Header() {
     return (
         <div className={classes.root} id="header">
             <NavBar />
-            <HeaderText />
+            <HeaderTitle />
         </div>
     )
 }
