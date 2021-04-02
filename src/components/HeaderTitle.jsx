@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
     title: {
         fontSize: '4rem',
         [theme.breakpoints.down('sm')]: {
-            marginTop: '20vh',
             fontSize: '3rem',
         },
     },
