@@ -6,11 +6,11 @@ You can see the Demo [here](https://aviad-something-good.herokuapp.com/).
 
 ## Available Scripts
 
+In the project directory, you can run:
+
 ### `npm start`
 
 Run the node server of the project. 
-
-In the project directory, you can run:
 
 ### `npm run client`
 
