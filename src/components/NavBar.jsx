@@ -5,7 +5,7 @@ import navButtons from '../static/navButtons'
 
 const useStyles = makeStyles((theme) => ({
     appBarTransparent: {
-        background: 'none', // אם יש רקע, מוחק אותו
+        background: 'none',
      },
      appBarSolid: {
         backgroundColor: '#fff',
@@ -13,12 +13,12 @@ const useStyles = makeStyles((theme) => ({
         borderBottom: '1px solid',
      },
      appbarWrapper: {
-         width: "85%", // יחסית לאלמנט ההורה (שמעליו)
-         margin: '0 auto', // תחתונים ועליונים אפס, ממרכז אופקית
+         width: "85%",
+         margin: '0 auto',
      },
      appbarTitle: {
          color: '#ffaaaa',
-         flexGrow: '1', // מכיוון שהוא אחד, והשני לא מוגדר, כלומר אפס, הוא יתפוס את כל המרחב הפנוי
+         flexGrow: '1',
          [theme.breakpoints.down('sm')]: {
             fontSize: '1.5rem',
         }
@@ -62,16 +62,20 @@ function NavBar() {
     window.addEventListener('scroll', changeBackground)
     return (
         <div>
-            <AppBar className={classes[navBackground]} elevation={0}> {/*אלווישן=גובה*/}
-                <Toolbar className={classes.appbarWrapper}> {/*סוג של פלקס*/}
+            <AppBar className={classes[navBackground]} elevation={0}>
+                <Toolbar className={classes.appbarWrapper}>
                 <h1 className={classes.appbarTitle}>
                     <span className={classes.redText}>משהו </span><span className={classes.colorText}>טוב</span>
                 </h1>
                 <Scroll to={navButtons[0].to} smooth={true}>
-                <Button className={`${classes.navButton} ${classes[navButtonBlack]}`}>{navButtons[0].title}</Button>
+                <Button className={`${classes.navButton} ${classes[navButtonBlack]}`}>
+                    {navButtons[0].title}
+                </Button>
                 </Scroll>
                 <Scroll to={navButtons[1].to} smooth={true}>
-                <Button className={`${classes.navButton} ${classes[navButtonBlack]}`}>{navButtons[1].title}</Button>
+                <Button className={`${classes.navButton} ${classes[navButtonBlack]}`}>
+                    {navButtons[1].title}
+                </Button>
                 </Scroll>
                 </Toolbar>
             </AppBar>

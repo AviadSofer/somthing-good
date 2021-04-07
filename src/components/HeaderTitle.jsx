@@ -6,8 +6,8 @@ import { Link as Scroll } from 'react-scroll'
 const useStyles = makeStyles((theme) => ({
     root: {
         width: "50%",
-        margin: '0 auto', // תחתונים ועליונים אפס, ממרכז אופקית
-        textAlign: 'center', // יישור טקסט
+        margin: '0 auto',
+        textAlign: 'center',
         [theme.breakpoints.down('sm')]: {
             width: '85%',
         },
@@ -37,10 +37,10 @@ function HeaderTitle() {
     const classes = useStyles();
     const [checked, setChecked] = useState(false);
     useEffect(() => {
-        setChecked(true) // ציקד הופך לטרו ברינדור הראשון של הדף
+        setChecked(true);
     }, [])
     return (
-        <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapsedHeight={50}> {/*אנימציה*/}
+        <Collapse in={checked} {...(checked ? { timeout: 1300 } : {})} collapsedHeight={50}>
         <div className={classes.root}>
             <h1 className={classes.title}>
                 משהו <span className={classes.colorText}>טוב</span>

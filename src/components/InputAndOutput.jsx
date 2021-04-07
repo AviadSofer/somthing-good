@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         minHeight: '100vh',
         display: 'flex',
-        justifyContent: 'center', // ציר X
+        justifyContent: 'center',
         alignItems: 'flex-start',
         fontFamily: 'Secular One, sans-serif',
         [theme.breakpoints.down('sm')]: {
@@ -76,7 +76,7 @@ function InputAndOutput() {
     return (
         <div className={classes.root} id={'input-and-output'}>
             <div className={classes.input}>
-                <h2>כאן כותבים, לא משנה האורך:</h2>
+                <h2>כאן כותבים משהו עד 250 תווים:</h2>
                 <TextareaAutosize
                     rowsMin={8}
                     maxLength={250}
@@ -85,7 +85,7 @@ function InputAndOutput() {
                     className={classes.textarea}
                 />
             </div>
-            <div id={'input-and-output'} className={classes.output}>
+            <div className={classes.output}>
                 <h2>וזו התוצאה, למטה אפשר להוריד, לשתף:</h2>
                 <p id={'text'} className={classes.outputText}>{text}</p>
                 <div className={classes.buttons}>

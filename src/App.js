@@ -4,16 +4,16 @@ import Explain from "./components/Explain";
 import Header from "./components/Header";
 import InputAndOutput from "./components/InputAndOutput";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     direction: 'rtl',
     height: '115vh',
-    backgroundAttachment: 'fixed', // parallax scrolling effect
+    backgroundAttachment: 'fixed',
     backgroundImage: `url(${process.env.PUBLIC_URL}/assets/background.jpg)`,
-    backgroundRepeat: "no-repeat", // התמונה לא תחזור על עצמה
-    backgroundSize: "cover", // מכסה את כל הדף, גם אם יצטרך למתוח את השוליים או לקצץ
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
   },
-});
+}));
 
 function App() {
   const classes = useStyles();

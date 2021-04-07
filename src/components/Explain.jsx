@@ -4,12 +4,12 @@ import { makeStyles } from '@material-ui/core'
 const useStyles = makeStyles((theme) => ({
     root: {
         minHeight: '100vh',
-        display: 'flex',
-        justifyContent: 'center', // ציר X
-        alignItems: 'center', // ציר Y
-        flexWrap: 'wrap',
-        margin: '0 auto', // תחתונים ועליונים אפס, ממרכז אופקית
         width: '82%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        margin: '0 auto',
         backgroundColor: '#fff',
         boxShadow: '0 0px 40px rgba(0, 0, 0, 0.2)',
         [theme.breakpoints.down('sm')]: {

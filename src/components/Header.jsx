@@ -7,8 +7,8 @@ const useStyles = makeStyles((theme) => ({
     root: {
         minHeight: '100vh',
         display: 'flex',
-        justifyContent: 'center', // ציר X
-        alignItems: 'center', // ציר Y
+        justifyContent: 'center',
+        alignItems: 'center',
         position: 'sticky',
         top: 0,
         color: '#fff',
