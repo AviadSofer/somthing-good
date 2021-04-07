@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: '#fff',
         color: '#eee',
         borderBottom: '1px solid',
-
      },
      appbarWrapper: {
          width: "85%", // יחסית לאלמנט ההורה (שמעליו)
@@ -30,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
      colorText: {
          color: '#5AFF3D'
      },
-     navButtonWhite: {
+     navButton: {
         color: '#fff',
         background: 'none',
         fontFamily: 'Secular One, sans-serif',
@@ -43,29 +42,21 @@ const useStyles = makeStyles((theme) => ({
      },
      navButtonBlack: {
          color: '#aaa',
-         background: 'none',
-         fontFamily: 'Secular One, sans-serif',
-         fontSize: '1.2rem',
-         margin: '7px',
-         [theme.breakpoints.down('sm')]: {
-             margin: '0',
-            fontSize: '1rem',
-         }
      },
 }))
 
 function NavBar() {
     const classes = useStyles();
     const [navBackground, setNavBackground] = useState('appBarTransparent');
-    const [navButton, setNavButton] = useState('navButtonWhite');
+    const [navButtonBlack, setNavButtonBlack] = useState('');
     function changeBackground() {
             const offetSetHeight = window.document.getElementById('explain').offsetHeight;
             if (window.pageYOffset > offetSetHeight) {
                 setNavBackground('appBarSolid')
-                setNavButton('navButtonBlack')
+                setNavButtonBlack('navButtonBlack')
             } else {
                 setNavBackground('appBarTransparent')
-                setNavButton('navButtonWhite')
+                setNavButtonBlack('')
             }
         }
     window.addEventListener('scroll', changeBackground)
@@ -77,10 +68,10 @@ function NavBar() {
                     <span className={classes.redText}>משהו </span><span className={classes.colorText}>טוב</span>
                 </h1>
                 <Scroll to={navButtons[0].to} smooth={true}>
-                <Button className={classes[navButton]}>{navButtons[0].title}</Button>
+                <Button className={`${classes.navButton} ${classes[navButtonBlack]}`}>{navButtons[0].title}</Button>
                 </Scroll>
                 <Scroll to={navButtons[1].to} smooth={true}>
-                <Button className={classes[navButton]}>{navButtons[1].title}</Button>
+                <Button className={`${classes.navButton} ${classes[navButtonBlack]}`}>{navButtons[1].title}</Button>
                 </Scroll>
                 </Toolbar>
             </AppBar>
