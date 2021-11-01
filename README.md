@@ -10,7 +10,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Run the node server of the project. 
+Run the node server of the project (If the script ot work try type first `npm run build`). 
 
 ### `npm run client`
 
